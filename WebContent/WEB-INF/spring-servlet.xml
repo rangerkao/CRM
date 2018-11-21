@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+ 
+ 	
+    <!-- aop 注解实现，自動掃描時要加上@Component讓Spring知道建立bean -->
+    <aop:aspectj-autoproxy/>
+    
+    
+ 	<!-- 掃描 特定資料夾下的 @Controller, @Service, @Repository, @Component, etc.. -->
+    <!-- <context:component-scan base-package="com.crunchify.controller" /> -->
+    <context:component-scan base-package="com.common" />
+ 	<context:component-scan base-package="com.action" />
+ 	<context:component-scan base-package="com.service" />
+ 	<context:component-scan base-package="com.dao" />
+ 	<!-- 宣告使用 Anootation 定義位址 ，不需在xml中定義-->
+    <mvc:annotation-driven />
+    
+    
+    
+    <!-- 因網址都被DispatcherServlet截獲，對於靜態資源使用其他方式定義 -->
+ 	<!-- <mvc:default-servlet-handler />将静态资源的处理经由Spring MVC框架交回Web应用服务器处理 -->
+ 	<!-- 而<mvc:resources />更进一步，由Spring MVC框架自己处理静态资源，并添加一些有用的附加值功能。 -->
+ 	<!-- <mvc:resources mapping="/**" location="/WEB-INF/" /> -->
+	<mvc:resources mapping="/css/**" location="/WEB-INF/css/" />
+ 	<mvc:resources mapping="/js/**" location="/WEB-INF/js/" /> 
+ 	<mvc:resources mapping="/pic/**" location="/WEB-INF/pic/" /> 
+
+ 	
+ 	<!-- 實際上DispatcherServlet必須根據一個HandlerMapping物件來決定請求由哪一個Controller來處理 -->
+ 	<!-- 當Controller返回ModelAndView後，DispatcherServlet會交由ViewResolver物件來作View層的相關解 析 -->
+ 	<!-- 此處已使用Annotation取代controller的bean設定 -->
+ 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+ 
+ 	
+ 	
+</beans>

@@ -1,0 +1,26 @@
+.date-label{
+	display: inline;
+	color: gray;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.date{
+	text-align:center;
+	height: 1.5em;
+    width: 8em;
+	background: transparent;
+    border-color: gray;
+    border-width: 1px;
+    color: gray;
+    font-weight: bold;
+}
+.pageN{
+	text-align:center;
+	height: 1.5em;
+    width: 2em;
+	background: transparent;
+    border-color: gray;
+    border-width: 1px;
+    color: gray;
+    font-weight: bold;
+}

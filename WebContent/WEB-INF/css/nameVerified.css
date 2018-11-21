@@ -1,0 +1,23 @@
+.dataTable input ,select {
+	width: 95%;
+    background-color: aliceblue;
+    border-width: 1;
+    margin-right: 2em;
+    text-align: center;
+}
+
+
+#compareModal table{
+	display: inline-block; 
+	text-align: center;
+}
+
+#compareModal th{
+	padding: 0 1em 0 1em;
+}
+
+#compareModal td{
+	border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}

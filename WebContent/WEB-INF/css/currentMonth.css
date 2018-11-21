@@ -1,0 +1,10 @@
+#currentMonth .Mdate{
+	text-align:center;
+	height: 1.5em;
+    width: 8em;
+	background: transparent;
+    border-color: gray;
+    border-width: 1px;
+    color: gray;
+    font-weight: bold;
+}

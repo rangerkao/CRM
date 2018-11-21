@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+	#userDataView .dataLabel {
+		width: 8.7em;
+	}
+	#userDataView .dataValue {
+		padding:0;
+		border-bottom-color: black;
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;
+		line-height: 26px
+	}
+	#userDataView .dataEdit {
+		height: 1.3em;
+		font-weight:bold;
+		margin-top: 0.1em;
+	    background: aliceblue;
+	    border-width: 1;
+	    border-bottom-color: lightgray;
+	    border-bottom-style: dashed;
+	    margin-right: 0;
+	    text-align: left;
+	}
+	.tipPot {
+		background-color:  red;
+		border-radius: 1em;
+		width: 1.2em;
+		height: 1.2em;
+		color:  white;
+		line-height:  1em;
+		position: relative;
+    	left: -1.5em;
+    	top: -0.7em;
+    	z-index: 3;
+	}
+
+	#pageMenu .dropdown-item:hover{
+		background-color: gray;
+		color: white;
+	}

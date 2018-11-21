@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+	#detail .dataLabel {
+		width: 6em;
+	}
+	#detail .dataValue {
+		border-bottom-color: black;
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;
+		line-height: 26px
+	}
